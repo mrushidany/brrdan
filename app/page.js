@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Footer from './_ui/components/Footer'
 
 export default function Home() {
