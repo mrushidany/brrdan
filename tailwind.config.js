@@ -18,6 +18,10 @@ module.exports = {
       },
       'black': {
         default: '#151515'
+      },
+      'yellow': {
+        default: '#BE9616',
+        100: '#F1E8CB'
       }
     }
   },
