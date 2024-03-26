@@ -1,5 +1,5 @@
-import { Mulish } from "next/font/google";
-import "./globals.css";
+import { Mulish } from 'next/font/google'
+import './globals.css'
 
 const mulish = Mulish({ 
   style: ['normal', 'italic'],
@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${mulish.variable}`}>{children}</body>
+    <html lang='en'>
+      <body className={`${mulish.variable} bg-black-default`}>{children}</body>
     </html>
   );
 }
