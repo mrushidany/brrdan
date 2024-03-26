@@ -11,6 +11,15 @@ module.exports = {
         mulish: ['var(--font-mulish)'],
       }
     },
+    colors: {
+      transparent: 'transparent',
+      'white': {
+        default: '#FFFFFF'
+      },
+      'black': {
+        default: '#151515'
+      }
+    }
   },
   plugins: [],
 };
