@@ -84,7 +84,7 @@ export default function AboutMePage() {
             ))}
         </ul>
         {tab.music && (
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {music?.map((item, index) => (
                     <div key={index} className={`w-full lg:w-[384px] h-auto flex flex-col gap-3 group hover:cursor-pointer hover:relative`}>
                         <div className='w-full h-[260px] bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${item.image})` }}></div>
@@ -103,9 +103,9 @@ export default function AboutMePage() {
             </div>
         )}
         {tab.store && (
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {store?.map((item, index) => (
-                    <div key={index} className={`w-full lg:w-[384px] h-[300px] lg:h-[500px] flex flex-col gap-3 group hover:cursor-pointer hover:relative bg-cover lg:bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url(${item.image})` }}>
+                    <div key={index} className={`w-full md:w-[354px] lg:w-[384px] h-[300px] md:h-[400px] lg:h-[500px] flex flex-col gap-3 group hover:cursor-pointer hover:relative bg-cover lg:bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url(${item.image})` }}>
 
                     </div>
                 ))}
