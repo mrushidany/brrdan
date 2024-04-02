@@ -1,11 +1,13 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaSpotify } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import { PiSoundcloudLogo } from "react-icons/pi"
+import mrBrrdan from '../../public/images/traced-brrrdan.jpeg'
 
 export default function AboutMePage() {
     const router = useRouter()
@@ -127,43 +129,48 @@ export default function AboutMePage() {
         )}
         {tab.follow && (
             <div className='w-full flex justify-center'>
-                <ul className='flex flex-row gap-4'>
-                    <li>
-                        <Link href='https://www.facebook.com/mrbrrdan/' target='_blank'>
-                            <FaFacebookF className='w-5 h-5' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://twitter.com/mrbrrdan' target='_blank'>
-                            <FaXTwitter className='w-5 h-6' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://www.instagram.com/mrbrrdan/' target='_blank'>
-                            <FaInstagram className='w-5 h-6' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://tiktok.com/@mrbrrdan' target='_blank'>
-                            <FaTiktok className='w-5 h-6' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://www.youtube.com/c/mrbrrdan' target='_blank'>
-                            <FaYoutube className='w-6 h-7' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://soundcloud.com/mrbrrdan' target='_blank'>
-                            <PiSoundcloudLogo className='w-6 h-7' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='https://open.spotify.com/artist/3tD9sLwREfofzG0m5pBmzx' target='_blank'>
-                            <FaSpotify  className='w-6 h-7' />
-                        </Link>
-                    </li>
-                </ul>
+                <div className='flex flex-col gap-8'>
+                    <div className='flex justify-center'>
+                        <Image src={mrBrrdan} className='w-40 h-40' />
+                    </div>
+                    <ul className='w-full flex flex-row justify-center gap-4'>
+                        <li>
+                            <Link href='https://www.facebook.com/mrbrrdan/' target='_blank'>
+                                <FaFacebookF className='w-5 h-5' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://twitter.com/mrbrrdan' target='_blank'>
+                                <FaXTwitter className='w-5 h-6' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://www.instagram.com/mrbrrdan/' target='_blank'>
+                                <FaInstagram className='w-5 h-6' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://tiktok.com/@mrbrrdan' target='_blank'>
+                                <FaTiktok className='w-5 h-6' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://www.youtube.com/c/mrbrrdan' target='_blank'>
+                                <FaYoutube className='w-6 h-7' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://soundcloud.com/mrbrrdan' target='_blank'>
+                                <PiSoundcloudLogo className='w-6 h-7' />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='https://open.spotify.com/artist/3tD9sLwREfofzG0m5pBmzx' target='_blank'>
+                                <FaSpotify  className='w-6 h-7' />
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         )}
       </div>
