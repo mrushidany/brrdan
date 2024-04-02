@@ -56,6 +56,24 @@ export default function AboutMePage() {
         }
     ]
 
+    const store = [
+        {
+            name: 'Brrdan Mask',
+            image: '/images/store/mask.jpg',
+            price: 5000
+        },
+        {
+            name: 'Brrdan Headset',
+            image: '/images/store/headset.jpg',
+            price: 50000
+        },
+        {
+            name: 'Brrdan Crop Top',
+            image: '/images/store/crop-top.jpg',
+            price: 15000
+        },
+    ]
+
   return (
     <div className='w-full min-h-screen py-10 px-4 lg:py-0 lg:px-0 bg-black-default flex items-center justify-center'>
       <div className='flex flex-col gap-8 lg:gap-10 text-yellow-100'>
@@ -67,7 +85,7 @@ export default function AboutMePage() {
         </ul>
         {tab.music && (
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-                {music.map((item, index) => (
+                {music?.map((item, index) => (
                     <div key={index} className={`w-full lg:w-[384px] h-auto flex flex-col gap-3 group hover:cursor-pointer hover:relative`}>
                         <div className='w-full h-[260px] bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${item.image})` }}></div>
                         <h4 className='font-bold text-lg lg:text-xl tracking-wider'>{item.title}</h4>
@@ -80,6 +98,15 @@ export default function AboutMePage() {
                                 </Link>
                             </div>
                         </div>
+                    </div>
+                ))}
+            </div>
+        )}
+        {tab.store && (
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+                {store?.map((item, index) => (
+                    <div key={index} className={`w-full lg:w-[384px] h-[300px] lg:h-[500px] flex flex-col gap-3 group hover:cursor-pointer hover:relative bg-cover lg:bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url(${item.image})` }}>
+
                     </div>
                 ))}
             </div>
