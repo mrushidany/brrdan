@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <main className='w-full h-screen flex flex-col gap-4 pb-4 bg-black-default relative'>
-      <div className='w-full h-full lg:h-[90%] bg-cover lg:bg-contain bg-center bg-no-repeat cursor-pointer' style={{ backgroundImage: `url('/images/traced-brrrdan.jpeg')` }}></div>
+      <div className='w-full h-full lg:h-[90%] bg-cover lg:bg-contain bg-center bg-no-repeat' style={{ backgroundImage: `url('/images/traced-brrrdan.jpeg')` }}></div>
       <div className='flex justify-center -mt-4'>
         <div onClick={navigate} className='bg-cover bg-no-repeat w-48 h-32 cursor-pointer' style={{  backgroundImage: `url(/images/gunny.png)` }}></div>
       </div>
