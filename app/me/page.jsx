@@ -122,7 +122,13 @@ export default function AboutMePage() {
                 ))}
             </div>
         )}
-        
+        {tab.follow && (
+            <ul className='w-full flex flex-row gap-2'>
+                <li>
+                    <Link href=''></Link>
+                </li>
+            </ul>
+        )}
       </div>
     </div>
   )
