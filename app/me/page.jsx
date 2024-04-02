@@ -105,8 +105,19 @@ export default function AboutMePage() {
         {tab.store && (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {store?.map((item, index) => (
-                    <div key={index} className={`w-full md:w-[354px] lg:w-[384px] h-[300px] md:h-[400px] lg:h-[500px] flex flex-col gap-3 group hover:cursor-pointer hover:relative bg-cover lg:bg-contain bg-center bg-no-repeat`} style={{ backgroundImage: `url(${item.image})` }}>
-
+                    <div key={index} className={`w-full md:w-[354px] lg:w-[384px] h-[300px] md:h-[400px] lg:h-[500px] group hover:cursor-pointer hover:relative bg-cover bg-center bg-no-repeat`} style={{ backgroundImage: `url(${item.image})` }}>
+                        <div className='hidden group-hover:flex group-hover:absolute px-4 pb-4 items-end w-full h-full bg-black-default bg-opacity-80 transition-all ease-in-out duration-500'>
+                            <div className='w-full flex flex-row justify-between items-end'>
+                                <div className='flex flex-col gap-2'>
+                                    <h3>{item.name}</h3>
+                                    <h4>{item.price.toLocaleString()} /=</h4>
+                                </div>
+                                <div>
+                                    <button className='w-auto h-auto px-2 py-1 md:px-4 md:py-2 flex items-center justify-center rounded-lg bg-yellow-default text-white-default text-xs md:text-base'>Buy Now</button>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 ))}
             </div>
